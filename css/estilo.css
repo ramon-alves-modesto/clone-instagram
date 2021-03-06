@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-size: 14px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #FFF;
     text-decoration: none;
 }
 
@@ -19,6 +18,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #FFF;
+}
+
+a {
+    color: #FFF;
 }
 
 .wrapper {
@@ -55,6 +59,57 @@ body {
 .grupo:nth-child(3) {
     border: none;
 }
+
+/*Cor site*/
+#botao-toogle {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#botao-toogle > label {
+    background-color: #577990;
+    display: block;
+    height: 20px;
+    width: 44px;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botao-toogle > label::after {
+    position: absolute;
+    display: block;
+    top: -3px;
+    left: -2px;
+    width: 26px;
+    height: 26px;
+    background-color: #3498db;
+    content: "";
+    transition: 0.3s;
+    border-radius: 100px;
+}
+
+#botao-toogle > label:active::after {
+    transform: scale(1.15, 0.85);
+}
+
+#botao-toogle > input:checked ~ label {
+    background-color: #577990;
+}
+#botao-toogle > input:checked ~ label::after {
+    left: 20px;
+    background-color: #3498db;
+}
+
+#botao-toogle > input {
+    display: none;
+}
+
 
 /*Área login*/
 
@@ -104,13 +159,25 @@ body {
 }
 
 .entrar-facebook {
-    padding: 10px;
-    padding-left: 25px;
-    background: url("../img/facebook-square-brands.png") no-repeat;
-    background-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.entrar-facebook, .entrar-facebook a {
     background-position: center left;
     color: #3498db;
     font-weight: bold;
+    
+}
+
+.entrar-facebook i {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.entrar > a {
+    margin-top: 15px;
 }
 
 #cadastro {

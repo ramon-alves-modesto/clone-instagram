@@ -8,8 +8,13 @@
     <title>Clone Instagram</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body id="corpo">
     <div class="wrapper">
+        <div id="botao-toogle">
+            <input onclick="on(this)" type="checkbox" id="toogle">
+            <label for="toogle"></label>
+        </div>
+
         <div class="conteudo">
             <div class="imagem-celular">
                 <img src="img/instagram-celular.png" alt="">
@@ -20,14 +25,18 @@
                     <div class="grupo" class="entrar-email">
                         <img id="logo" src="img/instagram-logo.png" alt="Logo instagram">
                     <form class="botoes">
-                        <input type="text" placeholder="Telefone, nome de usuário ou email">
-                        <input type="password" placeholder="Senha">
-                        <input class="botao-submit" type="submit">
+                        <input class="botao" type="text" placeholder="Telefone, nome de usuário ou email">
+                        <input class="botao" type="password" placeholder="Senha">
+                        <input class="botao" class="botao-submit" type="submit" value="Entrar">
                     </form>
     
                     <div class="entrar">
-                        <a href="#" class="entrar-facebook">Entrar com o Facebook</a>
-                        <a href="#">Esqueceu a senha?</a>
+                        <div class="entrar-facebook">
+                            <i class="fab fa-facebook-square"></i>
+                            <a href="#" >Entrar com o Facebook</a>
+                        </div>
+                        
+                        <a id="esqueceu" href="#">Esqueceu a senha?</a>
                     </div>
                     </div>
     
@@ -53,5 +62,6 @@
     </div>
 
     <script src="https://kit.fontawesome.com/8ad07c6848.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
