@@ -7,7 +7,7 @@ function on(elemento) {
         }
 
         let botoes = document.querySelectorAll('.botao');
-        for(let i = 0; i < botoes.length - 1; i++) {
+        for(let i = 0; i < botoes.length; i++) {
             botoes[i].style.border = 'thin solid #555';
         }
         document.body.style.color = '#000';
