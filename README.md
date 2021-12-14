@@ -1,2 +1,2 @@
 # clone-instagram
-https://ramon-alves-modesto.github.io/clone-instagram/
+https://ramonalvesmodesto.github.io/clone-instagram/
